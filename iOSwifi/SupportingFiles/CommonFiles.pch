@@ -1,0 +1,59 @@
+//
+//  CommonFiles.pch
+//  iOSwifi
+//
+//  Created by Stone on 2018/11/10.
+//  Copyright © 2018 Stone. All rights reserved.
+//
+
+#ifndef CommonFiles_pch
+#define CommonFiles_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Masonry.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <AFNetworking/AFNetworking.h>
+#import "UIView+Extension.h"
+//网络请求管理
+#import "NetWorkManager.h"
+//下拉刷新库
+#import <MJRefresh/MJRefresh.h>
+//键盘框架
+#import "IQKeyboardManager.h"
+//本地存储  KeyChainStore
+#import <UICKeyChainStore/UICKeyChainStore.h>
+//提示弹窗
+#import "StToast.h"
+//view extension
+#import "UIView+Toast.h"
+//Color extension
+#import "UIColor+Hex.h"
+//MBProgressHUD 提示框
+#import "MBProgressHUD/MBProgressHUD.h"
+//引入BaseVC
+#import "BaseViewController.h"
+//tableV没数据时显示的占位图
+#import "STPlaceholderView.h"
+//轮播图
+#import "SDCycleScrollView/SDCycleScrollView.h"
+//YYkit框架
+#import <YYKit/YYKit.h>
+#import "BaseModel.h"
+#import "BaseView.h"
+#import "BaseViewController.h"
+//腾讯Bugly日报收集系统哈
+#import <Bugly/Bugly.h>
+//检测网络：
+#import "NetCheckTools.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "Macros.h"
+#import "WFKViewDefine.h"
+
+#import "Target_Freshs.h"
+#import "CTMediator+FreshsActions.h"
+#import "VCTools.h"
+#import "STUIKit.h"
+#import "STLogService.h"
+#endif /* CommonFiles_pch */

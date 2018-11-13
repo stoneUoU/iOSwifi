@@ -1,0 +1,144 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - BaiduMapKit_Subspec/Base (3.4.4)
+  - BaiduMapKit_Subspec/Location (3.4.4):
+    - BaiduMapKit_Subspec/Base
+  - BaiduMapKit_Subspec/Map (3.4.4):
+    - BaiduMapKit_Subspec/Base
+  - BaiduMapKit_Subspec/Search (3.4.4):
+    - BaiduMapKit_Subspec/Base
+  - BaiduMapKit_Subspec/Utils (3.4.4):
+    - BaiduMapKit_Subspec/Base
+  - Bugly (2.5.0)
+  - CocoaLumberjack (3.4.2):
+    - CocoaLumberjack/Default (= 3.4.2)
+    - CocoaLumberjack/Extensions (= 3.4.2)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Extensions (3.4.2):
+    - CocoaLumberjack/Default
+  - CustomIOSAlertView (0.9.5)
+  - DoraemonKit/Core (1.0.0):
+    - PNChart
+  - DoraemonKit/WithLogger (1.0.0):
+    - CocoaLumberjack
+    - DoraemonKit/Core
+    - PNChart
+  - dsBridge (3.0.5)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - IQKeyboardManager (6.2.0)
+  - LKDBHelper (2.5.1):
+    - LKDBHelper/standard (= 2.5.1)
+  - LKDBHelper/standard (2.5.1):
+    - FMDB
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.1.15.7)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
+  - Reachability (3.2)
+  - Reveal-SDK (4)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - UICKeyChainStore (2.1.2)
+  - UICountingLabel (1.2.0)
+  - XYLaunchAndIntroduction (1.0):
+    - SDWebImage (= 4.0.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AFNetworking
+  - BaiduMapKit_Subspec/Base (= 3.4.4)
+  - BaiduMapKit_Subspec/Location (= 3.4.4)
+  - BaiduMapKit_Subspec/Map (= 3.4.4)
+  - BaiduMapKit_Subspec/Search (= 3.4.4)
+  - BaiduMapKit_Subspec/Utils (= 3.4.4)
+  - Bugly
+  - CocoaLumberjack
+  - CustomIOSAlertView (~> 0.9.5)
+  - DoraemonKit/WithLogger
+  - dsBridge
+  - IQKeyboardManager
+  - LKDBHelper
+  - Masonry
+  - MBProgressHUD
+  - MJRefresh
+  - Reachability
+  - Reveal-SDK (~> 4)
+  - SDCycleScrollView (~> 1.75)
+  - UICKeyChainStore
+  - XYLaunchAndIntroduction
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - BaiduMapKit_Subspec
+    - Bugly
+    - CocoaLumberjack
+    - CustomIOSAlertView
+    - DoraemonKit
+    - dsBridge
+    - FMDB
+    - IQKeyboardManager
+    - LKDBHelper
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - PNChart
+    - Reachability
+    - Reveal-SDK
+    - SDCycleScrollView
+    - SDWebImage
+    - UICKeyChainStore
+    - UICountingLabel
+    - XYLaunchAndIntroduction
+    - YYKit
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BaiduMapKit_Subspec: 91a6d539cf199d87511df653950410573aead32c
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  CustomIOSAlertView: cc4fa8e36219be3fd5ebcd40789f5b4aaae0f38e
+  DoraemonKit: 8e519fe918da59feab07c58bcfb63135968fbd92
+  dsBridge: 6ef092a7abdbe33f24b20d19edae1ca0ab99ded9
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  LKDBHelper: 9a276ba51f2e16263d46a9517e16cc9b03472664
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+  XYLaunchAndIntroduction: 7fe87187115584174081ac338f19ef7bcc2a1441
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 00d912e71125a2ca81247f924356c56eb808fe47
+
+COCOAPODS: 1.5.3

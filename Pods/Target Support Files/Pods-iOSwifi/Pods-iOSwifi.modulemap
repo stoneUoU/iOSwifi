@@ -1,0 +1,6 @@
+framework module Pods_iOSwifi {
+  umbrella header "Pods-iOSwifi-umbrella.h"
+
+  export *
+  module * { export * }
+}

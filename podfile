@@ -1,0 +1,28 @@
+platform :ios, ’10.0’
+target ‘iOSwifi’ do
+use_frameworks!
+inhibit_all_warnings!
+pod 'Masonry'
+pod 'AFNetworking'
+pod 'MJRefresh'
+pod 'IQKeyboardManager'
+pod 'UICKeyChainStore'
+pod 'MBProgressHUD'
+pod 'LKDBHelper'
+pod 'CustomIOSAlertView', '~> 0.9.5'
+pod 'Reachability'
+pod 'Bugly'
+pod 'YYKit'
+pod 'XYLaunchAndIntroduction'
+pod 'SDCycleScrollView','~> 1.75'
+#debug
+pod 'Reveal-SDK','~>4', :configurations => ['Debug']
+pod 'CocoaLumberjack'
+pod 'dsBridge'
+pod 'BaiduMapKit_Subspec/Base', '3.4.4'
+pod 'BaiduMapKit_Subspec/Location', '3.4.4'
+pod 'BaiduMapKit_Subspec/Map', '3.4.4'
+pod 'BaiduMapKit_Subspec/Search', '3.4.4'
+pod 'BaiduMapKit_Subspec/Utils', '3.4.4'
+pod 'DoraemonKit/WithLogger'
+end

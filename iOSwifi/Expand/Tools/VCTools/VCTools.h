@@ -40,6 +40,11 @@ NS_ASSUME_NONNULL_BEGIN
 //获取当前屏幕中present出来的viewcontroller
 + (UIViewController *)getPresentedVC;
 
+/**
+ 获取当前控制器(包括普通或者弹出的)
+ */
++ (UIViewController *)getFrontViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END

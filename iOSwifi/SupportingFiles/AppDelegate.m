@@ -20,6 +20,7 @@
 #import "DownLoad.h"
 #import "AppDelegate+Notification.h"
 #import "DoraemonKit.h"
+#import "DeviceTool.h"
 
 @interface AppDelegate (){
     BackGroundTaskTimerJob *_backGroundTaskTimerJob;
@@ -44,7 +45,7 @@
     [[LocationHelper sharedInstance] startLocationWithBlock:nil];
     [self initLog];
     
-    //[self initClass];
+    [self initClass];
     //[self setAsyncGo];
     //关闭设置为NO, 默认值为NO.  键盘监听
 //    [IQKeyboardManager sharedManager].enable = YES;
@@ -82,7 +83,7 @@
 }
 
 - (void)initDoraemonKit {
-    
+
     //调试工具
     #if defined(DEBUG) || defined(ADHOC)
         if (![LocalData isOpenDebugMode]) {
@@ -102,16 +103,22 @@
 }
 - (void)initClass {
     
-    DownLoad *downLoad = [[DownLoad alloc] init];
-    [downLoad downLoadWithUrl:@"我是林磊" finish:^(QuickLookStorageModel *model) {
-        STLog(@"%@",model.title);
-    }];
-    [downLoad downLoadWithUrl:@"我是林磊" complete:^(NSString *str) {
-        STLog(@"%@",str);
-    }];
-    [downLoad toExcute:^(NSString *str) {
-        STLog(@"%@",str);
-    }];
+    STLog(@"MAC = %@",[DeviceTool getMacaddress]);
+    
+    STLog(@"Idfv = %@",[DeviceTool deviceIdfv]);
+    
+    STLog(@"IdfA = %@",[DeviceTool deviceIdfa]);
+    
+//    DownLoad *downLoad = [[DownLoad alloc] init];
+//    [downLoad downLoadWithUrl:@"我是林磊" finish:^(QuickLookStorageModel *model) {
+//        STLog(@"%@",model.title);
+//    }];
+//    [downLoad downLoadWithUrl:@"我是林磊" complete:^(NSString *str) {
+//        STLog(@"%@",str);
+//    }];
+//    [downLoad toExcute:^(NSString *str) {
+//        STLog(@"%@",str);
+//    }];
     
 //    _backGroundTaskTimerJob = [BackGroundTaskTimerJob jobWithTaskBlock:^{
 //        //STLog(@"后台线程跑起来");

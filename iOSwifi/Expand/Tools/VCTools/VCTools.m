@@ -8,6 +8,9 @@
 
 #import "VCTools.h"
 
+//最大支持的的控制器层数
+static const int maxViewControllerStackCount = 1000;
+
 @implementation VCTools
 
 + (void)presentToCommVC:(UIViewController *)selfVC destVC:(UIViewController *)destVC animate:(BOOL )animateBool{
@@ -78,13 +81,57 @@
 
 + (UIViewController *)getPresentedVC
 {
-    UIViewController *appRootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
-    UIViewController *topVC = appRootVC;
-    if (topVC.presentedViewController) {
+    UIViewController *topVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    while (topVC.presentedViewController)
+    {
         topVC = topVC.presentedViewController;
     }
-    
+    if ([topVC isKindOfClass:[UINavigationController class]]) {
+        return [(UINavigationController *)topVC topViewController];
+    }
     return topVC;
+}
+
+/**
+ 获取当前控制器(包括普通或者弹出的)
+ */
++ (UIViewController *)getFrontViewController {
+    UIViewController *result = nil;
+    
+    UIWindow *window = [self frontWindow];
+    
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+    result = nextResponder;
+    else
+    result = window.rootViewController;
+    //present出来的控制器-假设有1000层presen出来的控制器
+    for (int i = 0; i < maxViewControllerStackCount; i++) {
+        if (result.presentedViewController) {
+            result = result.presentedViewController;
+        }else{
+            break;
+        }
+    }
+    
+    return result;
+}
+
++ (UIWindow *)frontWindow {
+    NSEnumerator *frontToBackWindows = [UIApplication.sharedApplication.windows reverseObjectEnumerator];
+    for (UIWindow *window in frontToBackWindows) {
+        BOOL windowOnMainScreen = window.screen == UIScreen.mainScreen;
+        BOOL windowIsVisible = !window.hidden && window.alpha > 0;
+        UIWindowLevel maxSupportedWindowLevel =  [UIApplication sharedApplication].keyWindow.windowLevel;//UIWindowLevelStatusBar + 1;
+        BOOL windowLevelSupported = (window.windowLevel >= UIWindowLevelNormal && window.windowLevel <= maxSupportedWindowLevel);
+        
+        if(windowOnMainScreen && windowIsVisible && windowLevelSupported) {
+            return window;
+        }
+    }
+    return nil;
 }
 
 @end

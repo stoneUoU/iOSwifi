@@ -25,4 +25,6 @@ pod 'BaiduMapKit_Subspec/Map', '3.4.4'
 pod 'BaiduMapKit_Subspec/Search', '3.4.4'
 pod 'BaiduMapKit_Subspec/Utils', '3.4.4'
 pod 'DoraemonKit/WithLogger'
+#pod 'SAMKeychain'
+pod 'UICKeyChainStore'
 end

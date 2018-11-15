@@ -19,6 +19,10 @@
 		8E02A3D921970FD200A263B8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3D821970FD200A263B8 /* TabBarViewController.m */; };
 		8E02A3DC2197112700A263B8 /* UIImage+intoColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3DB2197112700A263B8 /* UIImage+intoColor.m */; };
 		8E02A3DF2197122D00A263B8 /* UITabBar+dotSmall.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3DE2197122D00A263B8 /* UITabBar+dotSmall.m */; };
+		8E240F3A219D01F5009BAE4F /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F39219D01F5009BAE4F /* NSDate+Extension.m */; };
+		8E240F3E219D0360009BAE4F /* DeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F3D219D0360009BAE4F /* DeviceTool.m */; };
+		8E240F41219D05F7009BAE4F /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F40219D05F7009BAE4F /* OpenUDID.m */; };
+		8E240F45219D1778009BAE4F /* CacheCleanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F44219D1778009BAE4F /* CacheCleanTool.m */; };
 		8E531AB12196748D00EA1CF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E531AB02196748D00EA1CF3 /* AppDelegate.m */; };
 		8E531AB42196748D00EA1CF3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E531AB32196748D00EA1CF3 /* HomeViewController.m */; };
 		8E531AB92196748E00EA1CF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E531AB82196748E00EA1CF3 /* Assets.xcassets */; };
@@ -116,6 +120,14 @@
 		8E02A3DB2197112700A263B8 /* UIImage+intoColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+intoColor.m"; sourceTree = "<group>"; };
 		8E02A3DD2197122D00A263B8 /* UITabBar+dotSmall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+dotSmall.h"; sourceTree = "<group>"; };
 		8E02A3DE2197122D00A263B8 /* UITabBar+dotSmall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+dotSmall.m"; sourceTree = "<group>"; };
+		8E240F38219D01F5009BAE4F /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		8E240F39219D01F5009BAE4F /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		8E240F3C219D0360009BAE4F /* DeviceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceTool.h; sourceTree = "<group>"; };
+		8E240F3D219D0360009BAE4F /* DeviceTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceTool.m; sourceTree = "<group>"; };
+		8E240F3F219D05F7009BAE4F /* OpenUDID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		8E240F40219D05F7009BAE4F /* OpenUDID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		8E240F43219D1778009BAE4F /* CacheCleanTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheCleanTool.h; sourceTree = "<group>"; };
+		8E240F44219D1778009BAE4F /* CacheCleanTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheCleanTool.m; sourceTree = "<group>"; };
 		8E531AAC2196748D00EA1CF3 /* iOSwifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSwifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E531AAF2196748D00EA1CF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E531AB02196748D00EA1CF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -317,6 +329,26 @@
 			path = TabBarView;
 			sourceTree = "<group>";
 		};
+		8E240F3B219D0340009BAE4F /* DeviceTool */ = {
+			isa = PBXGroup;
+			children = (
+				8E240F3F219D05F7009BAE4F /* OpenUDID.h */,
+				8E240F40219D05F7009BAE4F /* OpenUDID.m */,
+				8E240F3C219D0360009BAE4F /* DeviceTool.h */,
+				8E240F3D219D0360009BAE4F /* DeviceTool.m */,
+			);
+			path = DeviceTool;
+			sourceTree = "<group>";
+		};
+		8E240F42219D1758009BAE4F /* CacheClean */ = {
+			isa = PBXGroup;
+			children = (
+				8E240F43219D1778009BAE4F /* CacheCleanTool.h */,
+				8E240F44219D1778009BAE4F /* CacheCleanTool.m */,
+			);
+			path = CacheClean;
+			sourceTree = "<group>";
+		};
 		8E531AA32196748D00EA1CF3 = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +433,8 @@
 		8E531AD32196833E00EA1CF3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8E240F42219D1758009BAE4F /* CacheClean */,
+				8E240F3B219D0340009BAE4F /* DeviceTool */,
 				8EA476C9219A9ECB002F504D /* SystemInfoTool */,
 				8EDD2006219A77FD009C3A47 /* PermissionHelper */,
 				8EDD2002219A776E009C3A47 /* LocationHelper */,
@@ -509,6 +543,8 @@
 			children = (
 				8E531B0121968C9D00EA1CF3 /* NSString+Extension.h */,
 				8E531B0221968C9D00EA1CF3 /* NSString+Extension.m */,
+				8E240F38219D01F5009BAE4F /* NSDate+Extension.h */,
+				8E240F39219D01F5009BAE4F /* NSDate+Extension.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -754,8 +790,8 @@
 		8EA476EF219AA615002F504D /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8E531AF02196868B00EA1CF3 /* BaseViewController.m */,
 				8E531AEF2196868B00EA1CF3 /* BaseViewController.h */,
+				8E531AF02196868B00EA1CF3 /* BaseViewController.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -1095,6 +1131,7 @@
 				8EEA3C5021985550002729F6 /* FindViewController.m in Sources */,
 				8E02A3D021970EF300A263B8 /* UITableView+WFKDequeue.m in Sources */,
 				8E02A3D921970FD200A263B8 /* TabBarViewController.m in Sources */,
+				8E240F45219D1778009BAE4F /* CacheCleanTool.m in Sources */,
 				8E531AF82196873700EA1CF3 /* NetCheckTools.m in Sources */,
 				8EEA3C4321985444002729F6 /* CTMediator.m in Sources */,
 				8E6BC0F32199953F00C18613 /* Person+AttrAdd.m in Sources */,
@@ -1127,10 +1164,12 @@
 				8E6BC0E32199931A00C18613 /* ValidatedFile.m in Sources */,
 				8EEA3C542198567B002729F6 /* VCTools.m in Sources */,
 				8EEA3C3C21984D4F002729F6 /* HomeView.m in Sources */,
+				8E240F41219D05F7009BAE4F /* OpenUDID.m in Sources */,
 				8EDD2009219A7824009C3A47 /* PermissionHelper.m in Sources */,
 				8E6BC10B2199A61200C18613 /* KVO.m in Sources */,
 				8E6BC0CB21995C7A00C18613 /* UIButton+ST_FixMultiClick.m in Sources */,
 				8EA476D6219AA2C8002F504D /* UIViewController+CBPopup.m in Sources */,
+				8E240F3A219D01F5009BAE4F /* NSDate+Extension.m in Sources */,
 				8E02A3C121970D4000A263B8 /* AppDelegate+Notification.m in Sources */,
 				8E6BC1042199A45F00C18613 /* UIImage+runtime.m in Sources */,
 				8EDD1FFD219A6F1F009C3A47 /* DownLoad.m in Sources */,
@@ -1146,6 +1185,7 @@
 				8E6BC0CF21995ED300C18613 /* STUIKit.m in Sources */,
 				8E531AE62196857B00EA1CF3 /* StToast.m in Sources */,
 				8EDD1FEC219A5E14009C3A47 /* STWeakProxy.m in Sources */,
+				8E240F3E219D0360009BAE4F /* DeviceTool.m in Sources */,
 				8E02A3D621970F8500A263B8 /* TabBar.m in Sources */,
 				8EDD1FE9219A5DC9009C3A47 /* NSTimer+Pluto.m in Sources */,
 				8E02A3DF2197122D00A263B8 /* UITabBar+dotSmall.m in Sources */,

@@ -37,8 +37,8 @@
             break;
     }
     
-    NSString *formatterString = [NSString stringWithFormat:@"%@%@.m  %@  line  %lu: %@",
-                                 logLevel, logMessage.fileName, logMessage.function,
+    NSString *formatterString = [NSString stringWithFormat:@"%@  line  %lu: %@",
+                                 logMessage.function,
                                  (unsigned long)logMessage.line, logMessage.message];
     return formatterString;
 }

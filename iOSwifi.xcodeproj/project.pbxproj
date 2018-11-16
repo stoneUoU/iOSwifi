@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E017F5C219E631300D76E1C /* EnviSwitchPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E017F5B219E631300D76E1C /* EnviSwitchPlugin.m */; };
+		8E017F5F219E647B00D76E1C /* TextContactPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E017F5E219E647B00D76E1C /* TextContactPlugin.m */; };
 		8E02A3BB2197057C00A263B8 /* QuickLookStorageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3BA2197057C00A263B8 /* QuickLookStorageModel.m */; };
 		8E02A3BE21970C4A00A263B8 /* LocalData+Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3BD21970C4A00A263B8 /* LocalData+Store.m */; };
 		8E02A3C121970D4000A263B8 /* AppDelegate+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3C021970D4000A263B8 /* AppDelegate+Notification.m */; };
@@ -23,6 +25,10 @@
 		8E240F3E219D0360009BAE4F /* DeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F3D219D0360009BAE4F /* DeviceTool.m */; };
 		8E240F41219D05F7009BAE4F /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F40219D05F7009BAE4F /* OpenUDID.m */; };
 		8E240F45219D1778009BAE4F /* CacheCleanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F44219D1778009BAE4F /* CacheCleanTool.m */; };
+		8E240F60219D32DD009BAE4F /* XYIntroductionPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F5A219D32DD009BAE4F /* XYIntroductionPage.m */; };
+		8E240F61219D32DD009BAE4F /* XYLaunchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F5C219D32DD009BAE4F /* XYLaunchVC.m */; };
+		8E240F62219D32DD009BAE4F /* UIImage+XYGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F5E219D32DD009BAE4F /* UIImage+XYGif.m */; };
+		8E240F65219D47E0009BAE4F /* AppDelegate+XYLaunchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F64219D47E0009BAE4F /* AppDelegate+XYLaunchVC.m */; };
 		8E531AB12196748D00EA1CF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E531AB02196748D00EA1CF3 /* AppDelegate.m */; };
 		8E531AB42196748D00EA1CF3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E531AB32196748D00EA1CF3 /* HomeViewController.m */; };
 		8E531AB92196748E00EA1CF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E531AB82196748E00EA1CF3 /* Assets.xcassets */; };
@@ -95,6 +101,10 @@
 		05E3C503F291B99B7300B239 /* Pods-iOSwifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSwifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSwifi/Pods-iOSwifi.release.xcconfig"; sourceTree = "<group>"; };
 		1D82C105741B437F6E77593B /* Pods_iOSwifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSwifi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9343A20F0A279AC60C1B0F /* Pods-iOSwifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSwifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSwifi/Pods-iOSwifi.debug.xcconfig"; sourceTree = "<group>"; };
+		8E017F5A219E631300D76E1C /* EnviSwitchPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnviSwitchPlugin.h; sourceTree = "<group>"; };
+		8E017F5B219E631300D76E1C /* EnviSwitchPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnviSwitchPlugin.m; sourceTree = "<group>"; };
+		8E017F5D219E647B00D76E1C /* TextContactPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextContactPlugin.h; sourceTree = "<group>"; };
+		8E017F5E219E647B00D76E1C /* TextContactPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextContactPlugin.m; sourceTree = "<group>"; };
 		8E02A3B92197057C00A263B8 /* QuickLookStorageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickLookStorageModel.h; sourceTree = "<group>"; };
 		8E02A3BA2197057C00A263B8 /* QuickLookStorageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickLookStorageModel.m; sourceTree = "<group>"; };
 		8E02A3BC21970C4A00A263B8 /* LocalData+Store.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalData+Store.h"; sourceTree = "<group>"; };
@@ -128,6 +138,15 @@
 		8E240F40219D05F7009BAE4F /* OpenUDID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		8E240F43219D1778009BAE4F /* CacheCleanTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheCleanTool.h; sourceTree = "<group>"; };
 		8E240F44219D1778009BAE4F /* CacheCleanTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheCleanTool.m; sourceTree = "<group>"; };
+		8E240F47219D2047009BAE4F /* StrongAndWeak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StrongAndWeak.h; sourceTree = "<group>"; };
+		8E240F59219D32DD009BAE4F /* XYIntroductionPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYIntroductionPage.h; sourceTree = "<group>"; };
+		8E240F5A219D32DD009BAE4F /* XYIntroductionPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYIntroductionPage.m; sourceTree = "<group>"; };
+		8E240F5C219D32DD009BAE4F /* XYLaunchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLaunchVC.m; sourceTree = "<group>"; };
+		8E240F5D219D32DD009BAE4F /* UIImage+XYGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYGif.h"; sourceTree = "<group>"; };
+		8E240F5E219D32DD009BAE4F /* UIImage+XYGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYGif.m"; sourceTree = "<group>"; };
+		8E240F5F219D32DD009BAE4F /* XYLaunchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLaunchVC.h; sourceTree = "<group>"; };
+		8E240F63219D47E0009BAE4F /* AppDelegate+XYLaunchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+XYLaunchVC.h"; sourceTree = "<group>"; };
+		8E240F64219D47E0009BAE4F /* AppDelegate+XYLaunchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+XYLaunchVC.m"; sourceTree = "<group>"; };
 		8E531AAC2196748D00EA1CF3 /* iOSwifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSwifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E531AAF2196748D00EA1CF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E531AB02196748D00EA1CF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -291,6 +310,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E017F59219E62FF00D76E1C /* DoraemonKit */ = {
+			isa = PBXGroup;
+			children = (
+				8E017F5A219E631300D76E1C /* EnviSwitchPlugin.h */,
+				8E017F5B219E631300D76E1C /* EnviSwitchPlugin.m */,
+				8E017F5D219E647B00D76E1C /* TextContactPlugin.h */,
+				8E017F5E219E647B00D76E1C /* TextContactPlugin.m */,
+			);
+			path = DoraemonKit;
+			sourceTree = "<group>";
+		};
 		8E02A3B82197053400A263B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +379,52 @@
 			path = CacheClean;
 			sourceTree = "<group>";
 		};
+		8E240F46219D1CDC009BAE4F /* PlaceHolderView(占位图) */ = {
+			isa = PBXGroup;
+			children = (
+				8E531AF3219686D700EA1CF3 /* STPlaceholderView.h */,
+				8E531AF4219686D700EA1CF3 /* STPlaceholderView.m */,
+			);
+			path = "PlaceHolderView(占位图)";
+			sourceTree = "<group>";
+		};
+		8E240F56219D32C9009BAE4F /* Sdk */ = {
+			isa = PBXGroup;
+			children = (
+				8E240F57219D32DD009BAE4F /* XYIntroductionAndLaunch */,
+			);
+			path = Sdk;
+			sourceTree = "<group>";
+		};
+		8E240F57219D32DD009BAE4F /* XYIntroductionAndLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				8E240F58219D32DD009BAE4F /* XYIntroduction */,
+				8E240F5B219D32DD009BAE4F /* XYLaunch */,
+			);
+			path = XYIntroductionAndLaunch;
+			sourceTree = "<group>";
+		};
+		8E240F58219D32DD009BAE4F /* XYIntroduction */ = {
+			isa = PBXGroup;
+			children = (
+				8E240F59219D32DD009BAE4F /* XYIntroductionPage.h */,
+				8E240F5A219D32DD009BAE4F /* XYIntroductionPage.m */,
+			);
+			path = XYIntroduction;
+			sourceTree = "<group>";
+		};
+		8E240F5B219D32DD009BAE4F /* XYLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				8E240F5F219D32DD009BAE4F /* XYLaunchVC.h */,
+				8E240F5C219D32DD009BAE4F /* XYLaunchVC.m */,
+				8E240F5D219D32DD009BAE4F /* UIImage+XYGif.h */,
+				8E240F5E219D32DD009BAE4F /* UIImage+XYGif.m */,
+			);
+			path = XYLaunch;
+			sourceTree = "<group>";
+		};
 		8E531AA32196748D00EA1CF3 = {
 			isa = PBXGroup;
 			children = (
@@ -373,7 +449,7 @@
 				8E6BC0E72199937B00C18613 /* Bottom */,
 				8E531AF921968B4300EA1CF3 /* Store(数据存储) */,
 				8E531AD22196833E00EA1CF3 /* Expand */,
-				8E531AD72196834500EA1CF3 /* Sdk */,
+				8E240F56219D32C9009BAE4F /* Sdk */,
 				8E531AC921967D8700EA1CF3 /* Module(主要模块) */,
 				8E531AC521967CEC00EA1CF3 /* SupportingFiles */,
 				8E531AB82196748E00EA1CF3 /* Assets.xcassets */,
@@ -388,6 +464,8 @@
 			children = (
 				8E531AAF2196748D00EA1CF3 /* AppDelegate.h */,
 				8E531AB02196748D00EA1CF3 /* AppDelegate.m */,
+				8E240F63219D47E0009BAE4F /* AppDelegate+XYLaunchVC.h */,
+				8E240F64219D47E0009BAE4F /* AppDelegate+XYLaunchVC.m */,
 				8E02A3BF21970D4000A263B8 /* AppDelegate+Notification.h */,
 				8E02A3C021970D4000A263B8 /* AppDelegate+Notification.m */,
 				8E531AC621967D2800EA1CF3 /* CommonFiles.pch */,
@@ -433,6 +511,7 @@
 		8E531AD32196833E00EA1CF3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8E017F59219E62FF00D76E1C /* DoraemonKit */,
 				8E240F42219D1758009BAE4F /* CacheClean */,
 				8E240F3B219D0340009BAE4F /* DeviceTool */,
 				8EA476C9219A9ECB002F504D /* SystemInfoTool */,
@@ -475,15 +554,9 @@
 			children = (
 				8E6BC0DA2199816900C18613 /* Singleton.h */,
 				8E6BC0DD2199910100C18613 /* MutiThread.h */,
+				8E240F47219D2047009BAE4F /* StrongAndWeak.h */,
 			);
 			path = Macros;
-			sourceTree = "<group>";
-		};
-		8E531AD72196834500EA1CF3 /* Sdk */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sdk;
 			sourceTree = "<group>";
 		};
 		8E531AD82196835300EA1CF3 /* UIKit */ = {
@@ -515,10 +588,9 @@
 		8E531AF2219686A600EA1CF3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E240F46219D1CDC009BAE4F /* PlaceHolderView(占位图) */,
 				8EA476E9219AA548002F504D /* UIButton */,
 				8EA476CD219AA163002F504D /* UILabel */,
-				8E531AF3219686D700EA1CF3 /* STPlaceholderView.h */,
-				8E531AF4219686D700EA1CF3 /* STPlaceholderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1042,9 +1114,9 @@
 				"${PODS_ROOT}/Reveal-SDK/RevealServer-4/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TYPagerController/TYPagerController.framework",
 				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/XYLaunchAndIntroduction/XYLaunchAndIntroduction.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 				"${BUILT_PRODUCTS_DIR}/dsBridge/dsBridge.framework",
 			);
@@ -1065,9 +1137,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYPagerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XYLaunchAndIntroduction.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/dsBridge.framework",
 			);
@@ -1134,6 +1206,7 @@
 				8E240F45219D1778009BAE4F /* CacheCleanTool.m in Sources */,
 				8E531AF82196873700EA1CF3 /* NetCheckTools.m in Sources */,
 				8EEA3C4321985444002729F6 /* CTMediator.m in Sources */,
+				8E240F62219D32DD009BAE4F /* UIImage+XYGif.m in Sources */,
 				8E6BC0F32199953F00C18613 /* Person+AttrAdd.m in Sources */,
 				8EDD2001219A74A6009C3A47 /* KVObserver.m in Sources */,
 				8E531ADE2196841E00EA1CF3 /* NetWorkManager.m in Sources */,
@@ -1166,10 +1239,13 @@
 				8EEA3C3C21984D4F002729F6 /* HomeView.m in Sources */,
 				8E240F41219D05F7009BAE4F /* OpenUDID.m in Sources */,
 				8EDD2009219A7824009C3A47 /* PermissionHelper.m in Sources */,
+				8E240F60219D32DD009BAE4F /* XYIntroductionPage.m in Sources */,
 				8E6BC10B2199A61200C18613 /* KVO.m in Sources */,
 				8E6BC0CB21995C7A00C18613 /* UIButton+ST_FixMultiClick.m in Sources */,
 				8EA476D6219AA2C8002F504D /* UIViewController+CBPopup.m in Sources */,
+				8E017F5C219E631300D76E1C /* EnviSwitchPlugin.m in Sources */,
 				8E240F3A219D01F5009BAE4F /* NSDate+Extension.m in Sources */,
+				8E240F65219D47E0009BAE4F /* AppDelegate+XYLaunchVC.m in Sources */,
 				8E02A3C121970D4000A263B8 /* AppDelegate+Notification.m in Sources */,
 				8E6BC1042199A45F00C18613 /* UIImage+runtime.m in Sources */,
 				8EDD1FFD219A6F1F009C3A47 /* DownLoad.m in Sources */,
@@ -1185,6 +1261,7 @@
 				8E6BC0CF21995ED300C18613 /* STUIKit.m in Sources */,
 				8E531AE62196857B00EA1CF3 /* StToast.m in Sources */,
 				8EDD1FEC219A5E14009C3A47 /* STWeakProxy.m in Sources */,
+				8E240F61219D32DD009BAE4F /* XYLaunchVC.m in Sources */,
 				8E240F3E219D0360009BAE4F /* DeviceTool.m in Sources */,
 				8E02A3D621970F8500A263B8 /* TabBar.m in Sources */,
 				8EDD1FE9219A5DC9009C3A47 /* NSTimer+Pluto.m in Sources */,
@@ -1196,6 +1273,7 @@
 				8E531AB12196748D00EA1CF3 /* AppDelegate.m in Sources */,
 				8E6BC0EF219994CA00C18613 /* Person.m in Sources */,
 				8E6BC0D62199680700C18613 /* STLogService.m in Sources */,
+				8E017F5F219E647B00D76E1C /* TextContactPlugin.m in Sources */,
 				8E531B0321968C9D00EA1CF3 /* NSString+Extension.m in Sources */,
 				8EA476E5219AA47A002F504D /* UIImageView+CornerRadius.m in Sources */,
 			);
@@ -1346,6 +1424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.iOSwifi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Debug;
 		};
@@ -1368,6 +1447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.iOSwifi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Release;
 		};

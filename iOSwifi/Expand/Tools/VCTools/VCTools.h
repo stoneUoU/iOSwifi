@@ -45,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIViewController *)getFrontViewController;
 
+//获取tabbar选中的viewcontroller
++ (UIViewController *)getTarBarSelectVC;
 @end
 
 NS_ASSUME_NONNULL_END

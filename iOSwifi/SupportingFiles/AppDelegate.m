@@ -21,8 +21,11 @@
 #import "AppDelegate+Notification.h"
 #import "DoraemonKit.h"
 #import "DeviceTool.h"
+#import "XYLaunchVC.h"
+#import "XYIntroductionPage.h"
+#import "AppDelegate+XYLaunchVC.h"
 
-@interface AppDelegate (){
+@interface AppDelegate ()<XYLaunchDelegate,XYIntroductionDelegate>{
     BackGroundTaskTimerJob *_backGroundTaskTimerJob;
 }
 
@@ -37,14 +40,12 @@
     
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    CATransition *anim = [[CATransition alloc] init];
-    anim.type = @"rippleEffect";
-    anim.duration = 1.0;
-    [self.window.layer addAnimation:anim forKey:nil];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil];
+    UIViewController *launchVC = [sb instantiateInitialViewController];
+    self.window.rootViewController = launchVC;
     [self.window makeKeyAndVisible];
     [[LocationHelper sharedInstance] startLocationWithBlock:nil];
     [self initLog];
-    
     [self initClass];
     //[self setAsyncGo];
     //关闭设置为NO, 默认值为NO.  键盘监听
@@ -57,24 +58,13 @@
     if (remoteUserInfo) {//远程通知启动App
         //[self dealPushM:remoteUserInfo];
     }else{
-        self.window.rootViewController = [TabBarViewController sharedVC];
-        AppDelegate *delegate = [AppDelegate appDelegate];
-        UITabBarController *tabBarController = (UITabBarController *)delegate.window.rootViewController;
-        tabBarController.selectedIndex = 0;
+        if ([[NSString stringWithFormat:@"%@",[UICKeyChainStore keyChainStore][@"firstInA"]]  isEqual: @"true"]){
+            [self pageGo];
+        }else{
+            //[self setFollow];
+            [self xyLoadIntroductionPageWithExampleType:LoadIntroductionPageWithExampleType2];
+        }
         
-        [tabBarController.tabBar showBadgeOnItemIndex:1];
-        
-        UITabBarItem * item=[tabBarController.tabBar.items objectAtIndex:0];
-        // 显示
-        item.badgeValue=[NSString stringWithFormat:@"1"];
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            item.badgeValue =nil;
-        });
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [tabBarController.tabBar hideBadgeOnItemIndex:1];
-        });
     }
     
     [self initWithOptions:launchOptions];
@@ -87,15 +77,38 @@
     //调试工具
     #if defined(DEBUG) || defined(ADHOC)
         if (![LocalData isOpenDebugMode]) {
-            [[DoraemonManager shareInstance] addPluginWithTitle:@"测试插件" icon:@"icon_shoppingcar_click" desc:@"测试插件" pluginName:@"TestPlugin" atModule:@"测试工具集"];
-            [[DoraemonManager shareInstance] addStartPlugin:@"StartPlugin"];
+            [[DoraemonManager shareInstance] addPluginWithTitle:@"环境切换" icon:@"apollo" desc:@"环境切换" pluginName:@"EnviSwitchPlugin" atModule:@"业务专区"];
+            [[DoraemonManager shareInstance] addPluginWithTitle:@"文本检测" icon:@"apollo" desc:@"文本检测" pluginName:@"TextContactPlugin" atModule:@"业务专区"];
+            [[DoraemonManager shareInstance] addStartPlugin:@"EnviSwitchPlugin"];
+            [[DoraemonManager shareInstance] addStartPlugin:@"TextContactPlugin"];
             [[DoraemonManager shareInstance] addH5DoorBlock:^(NSString *h5Url) {
-                NSLog(@"使用自带容器打开H5链接: %@",h5Url);
+                STLog(@"使用自带容器打开H5链接: %@",h5Url);
             }];
             [[DoraemonManager shareInstance] install];
         }
     #endif
 
+}
+
+- (void)pageGo {
+    self.window.rootViewController = [[TabBarViewController alloc] init];
+    AppDelegate *delegate = [AppDelegate appDelegate];
+    UITabBarController *tabBarController = (UITabBarController *)delegate.window.rootViewController;
+    tabBarController.selectedIndex = 2;
+    
+    [tabBarController.tabBar showBadgeOnItemIndex:1];
+    
+    UITabBarItem * item=[tabBarController.tabBar.items objectAtIndex:0];
+    // 显示
+    item.badgeValue=[NSString stringWithFormat:@"1"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        item.badgeValue =nil;
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [tabBarController.tabBar hideBadgeOnItemIndex:1];
+    });
 }
 
 - (void)initLog {
@@ -178,6 +191,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+//    [self xyLoadIntroductionPageWithExampleType:LoadIntroductionPageWithExampleType2];
 }
 
 
@@ -194,4 +208,14 @@
     return (AppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
+- (void)xyLaunchAdImgViewAction:(id)sender withObject:(id)object {
+    [self toAdsClick];
+}
+
+- (void)xyIntroductionViewEnterTap:(id)sender {
+    [self toBtnClick];
+}
+
 @end
+
+

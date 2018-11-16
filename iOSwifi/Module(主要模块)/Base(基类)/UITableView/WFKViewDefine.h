@@ -25,23 +25,6 @@ cell = [[__class alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifie
 return cell;\
 }\
 
-//定义weakify
-#ifndef weakify
-    #if DEBUG
-        #if __has_feature(objc_arc)
-            #define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
-        #else
-            #define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
-        #endif
-    #else
-        #if __has_feature(objc_arc)
-            #define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
-        #else
-            #define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
-        #endif
-    #endif
-#endif
-
 #endif /* WFKViewDefine_h */
 
 

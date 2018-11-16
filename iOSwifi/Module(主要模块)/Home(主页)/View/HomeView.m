@@ -62,7 +62,12 @@
 }
 
 - (void)toFreshDs {
-    [_delegate toFreshDs];
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(toFreshDs)])
+    {
+        // 调用代理方法
+        [_delegate toFreshDs];
+    }
 }
 @end
 

@@ -58,10 +58,9 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - TYPagerController (2.1.2)
   - UICKeyChainStore (2.1.2)
   - UICountingLabel (1.2.0)
-  - XYLaunchAndIntroduction (1.0):
-    - SDWebImage (= 4.0.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -86,8 +85,8 @@ DEPENDENCIES:
   - Reachability
   - Reveal-SDK (~> 4)
   - SDCycleScrollView (~> 1.75)
+  - TYPagerController
   - UICKeyChainStore
-  - XYLaunchAndIntroduction
   - YYKit
 
 SPEC REPOS:
@@ -110,9 +109,9 @@ SPEC REPOS:
     - Reveal-SDK
     - SDCycleScrollView
     - SDWebImage
+    - TYPagerController
     - UICKeyChainStore
     - UICountingLabel
-    - XYLaunchAndIntroduction
     - YYKit
 
 SPEC CHECKSUMS:
@@ -134,11 +133,11 @@ SPEC CHECKSUMS:
   Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
-  XYLaunchAndIntroduction: 7fe87187115584174081ac338f19ef7bcc2a1441
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 375d4022d947db6613f7240942d5b345eee2e5d2
+PODFILE CHECKSUM: d8edc1af73a06e4a00bd997b0e6be0f19270bda3
 
 COCOAPODS: 1.5.3

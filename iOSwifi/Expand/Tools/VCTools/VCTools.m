@@ -7,6 +7,8 @@
 //
 
 #import "VCTools.h"
+#import "AppDelegate.h"
+#import "TabBarViewController.h"
 
 //最大支持的的控制器层数
 static const int maxViewControllerStackCount = 1000;
@@ -133,5 +135,13 @@ static const int maxViewControllerStackCount = 1000;
     }
     return nil;
 }
+
++ (UIViewController *)getTarBarSelectVC{
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UITabBarController *tabVC = (UITabBarController *)delegate.window.rootViewController;
+    UIViewController *selectVC =  tabVC.selectedViewController;
+    return selectVC;
+}
+
 
 @end

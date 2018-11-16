@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol HomeViewDelegate
+@protocol HomeViewDelegate <NSObject>
 
 //这里只需要声明方法
 - (void)toFreshDs; //下拉刷新
@@ -19,11 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeView : BaseView
 
-@property (nonatomic ,strong)UILabel *mainFont;
+@property (nonatomic ,strong) UILabel *mainFont;
 
-@property (nonatomic ,strong)UITableView *tableView;
+@property (nonatomic ,strong) UITableView *tableView;
 
-@property (nonatomic ,weak)id<HomeViewDelegate> delegate; //定义一个ConnectVDel属性
+@property (nonatomic ,weak) id<HomeViewDelegate> delegate; //定义一个ConnectVDel属性
 
 @end
 

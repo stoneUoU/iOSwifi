@@ -19,7 +19,7 @@
 
 
 #import "XYLaunchVC.h"
-#import <UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 #import "UIImage+XYGif.h"
 #define XYScreenBounds [UIScreen mainScreen].bounds
 @interface XYLaunchVC ()<UIScrollViewDelegate>
@@ -41,8 +41,12 @@
         self.xyGifFrontView  = [[UIView alloc]initWithFrame:XYScreenBounds];
         self.xyRollFrontView = [[UIView alloc]initWithFrame:XYScreenBounds];
         if(_xyLaunchType == XYLaunchAD){
-            self.xyAdImgView = [[UIImageView alloc]initWithFrame:XYScreenBounds];
-
+            self.xyAdImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, XYScreenBounds.size.width, XYScreenBounds.size.height - 120)];
+            self.logoView = [[UIView alloc]initWithFrame:CGRectMake(0, XYScreenBounds.size.height - 120, XYScreenBounds.size.width, 120)];
+            self.logoImgView = [[UIImageView alloc]initWithFrame:CGRectMake((XYScreenBounds.size.width - 140)/2, 40, 140, 40)];
+            self.logoImgView.image = [UIImage imageNamed:@"icon_splash_start_logo"];
+            [self.logoView addSubview:self.logoImgView];
+            [self.view addSubview:self.logoView];
         }
 
     }
@@ -333,6 +337,9 @@
     self.xyAdDuration --;
     if(self.xyAdDuration <0){
         [self.xyAdTimer invalidate];
+        
+        
+        STLog(@"%@",self.view.window.rootViewController);
         self.view.window.rootViewController = self.xyRootVC;
     }
     if(self.xyIsSkip){
@@ -363,6 +370,7 @@
 }
 
 - (void)xyBackMainVC{
+    STLog(@"%@",self.view.window.rootViewController);
     self.view.window.rootViewController = self.xyRootVC;
 
 }

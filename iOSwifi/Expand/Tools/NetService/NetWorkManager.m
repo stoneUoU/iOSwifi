@@ -85,7 +85,7 @@
  *  @param failureBlock 请求失败的回调
  */
 
-+(void)requestWithType:(HttpRequestType)type withUrlString:(NSString *)urlString withParaments:(id)paraments Authos:(NSString *)Authos withSuccessBlock:(requestSuccess)successBlock withFailureBlock:(requestFailure)failureBlock
++(void)requestWithType:(HttpRequestType)type withUrlString:(NSString *)urlString withParaments:(id)paraments Authos:(NSString *)Authos withSuccessBlock:(RequestSuccess )successBlock withFailureBlock:(RequestFailure )failureBlock
 {
     
     switch (type) {

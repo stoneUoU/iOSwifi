@@ -61,6 +61,8 @@ typedef enum : NSUInteger {
 @property (nonatomic,strong)NSString * xyAdActionUrl;//详情页weburl
 @property (nonatomic,strong)NSString * xyAdTitle;//详情页广告标题
 @property (nonatomic,assign)BOOL       xyIsSkip;//是否显示跳过按钮
+@property (nonatomic,strong)UIView *logoView;
+@property (nonatomic,strong)UIImageView *logoImgView;
 
 //新手向导
 @property (nonatomic,strong)NSArray * xyGuideImgNameArr;//本地图片数组
@@ -85,6 +87,8 @@ typedef enum : NSUInteger {
 
 //重置开启定时器
 - (void)xy_startFire;
+
+- (void)xySkipTap;
 
 @end
 

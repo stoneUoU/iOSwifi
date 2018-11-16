@@ -13,7 +13,6 @@ pod 'CustomIOSAlertView', '~> 0.9.5'
 pod 'Reachability'
 pod 'Bugly'
 pod 'YYKit'
-pod 'XYLaunchAndIntroduction'
 pod 'SDCycleScrollView','~> 1.75'
 #debug
 pod 'Reveal-SDK','~>4', :configurations => ['Debug']
@@ -27,4 +26,6 @@ pod 'BaiduMapKit_Subspec/Utils', '3.4.4'
 pod 'DoraemonKit/WithLogger'
 #pod 'SAMKeychain'
 pod 'UICKeyChainStore'
+pod 'TYPagerController'
+pod 'SDCycleScrollView','~> 1.75'
 end

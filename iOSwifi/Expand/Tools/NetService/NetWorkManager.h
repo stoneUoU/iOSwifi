@@ -18,10 +18,10 @@ typedef NS_ENUM(NSUInteger,HttpRequestType)
 
 
 /**定义请求成功的block*/
-typedef void(^requestSuccess)( NSDictionary * object);
+typedef void(^RequestSuccess)( NSDictionary * object);
 
 /**定义请求失败的block*/
-typedef void(^requestFailure)( NSError *error);
+typedef void(^RequestFailure)( NSError *error);
 
 
 @interface NetWorkManager : AFHTTPSessionManager
@@ -43,7 +43,7 @@ typedef void(^requestFailure)( NSError *error);
  *  @param successBlock 请求成功的回调
  *  @param failureBlock 请求失败的回调
  */
-+(void)requestWithType:(HttpRequestType)type withUrlString:(NSString *)urlString withParaments:(id)paraments Authos:(NSString *)Authos withSuccessBlock:( requestSuccess)successBlock withFailureBlock:( requestFailure)failureBlock;
++(void)requestWithType:(HttpRequestType)type withUrlString:(NSString *)urlString withParaments:(id)paraments Authos:(NSString *)Authos withSuccessBlock:(RequestSuccess )successBlock withFailureBlock:(RequestFailure )failureBlock;
 
 
 +(void)cancelAllRequest;

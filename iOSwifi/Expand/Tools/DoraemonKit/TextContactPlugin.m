@@ -10,4 +10,9 @@
 
 @implementation TextContactPlugin
 
+- (void)pluginDidLoad{
+    STLog(@"999999999999999999");
+    //    [[DoraemonManager shareInstance] hiddenHomeWindow];
+}
+
 @end

@@ -8,6 +8,11 @@
 
 #import "EnviSwitchPlugin.h"
 
-@implementation EnviSwitchPlugin
+@implementation EnviSwitchPlugin 
+
+- (void)pluginDidLoad{
+    STLog(@"0000000000000000000");
+//    [[DoraemonManager shareInstance] hiddenHomeWindow];
+}
 
 @end

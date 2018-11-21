@@ -14,7 +14,7 @@
 - (UIViewController *)Action_ToHomeModeViewController:(NSDictionary *)params {
     FindViewController *findView = [[FindViewController alloc] init];
     if (params) {
-        findView.pass_vals = params;
+        findView.staticVals = params;
     }
     return findView;
 }

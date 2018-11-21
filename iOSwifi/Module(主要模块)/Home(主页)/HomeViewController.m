@@ -168,9 +168,9 @@
 //        //}];
 //        STLog(@"%@",model.name);
         
-//        UIViewController *vc = [[CTMediator sharedInstance] st_mediator_toVCWithParams:@{@"林磊":@"林磊"}];
-//        //[self.navigationController pushViewController:vc animated:YES];
-//        [VCTools pushToNextVC:self destVC:vc];
+        UIViewController *vc = [[CTMediator sharedInstance] st_mediator_toVCWithParams:@{@"林磊":@"林磊"}];
+        //[self.navigationController pushViewController:vc animated:YES];
+        [VCTools pushToNextVC:self destVC:vc];
         
         [LocalData saveDebugModeStatus:![LocalData isOpenDebugMode]];
         

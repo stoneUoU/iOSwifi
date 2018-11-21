@@ -12,7 +12,9 @@
 
 typedef NS_ENUM(NSInteger,LoadIntroductionPageWithExampleType){
     LoadIntroductionPageWithExampleType1 = 1,
-    LoadIntroductionPageWithExampleType2
+    LoadIntroductionPageWithExampleType2,
+    LoadIntroductionPageWithExampleType3
+
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -27,11 +29,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSArray *xyCoverTitleArr;
 
+@property (nonatomic, strong) NSMutableArray *imgGroups;
+
 @property (nonatomic, strong) NSURL *xyVideoUrl;
 
 @property (nonatomic, strong) XYLaunchVC *xyLaunch;
 
-- (void)xyLoadIntroductionPageWithExampleType:(LoadIntroductionPageWithExampleType )type;
+- (void)xyLoadIntroductionPageWithExampleType:(LoadIntroductionPageWithExampleType )type isAsRootVC:(BOOL )asRootVC;
 //详情页代理
 - (void)toAdsClick;
 //进入按钮事件

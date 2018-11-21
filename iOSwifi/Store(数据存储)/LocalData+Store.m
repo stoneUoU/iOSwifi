@@ -50,6 +50,26 @@
     return [[self objectForKey:@"stone_001"] boolValue];
 }
 
++ (void)saveEnterForegroundVC:(UIViewController *)vcStr {
+    [self setObject:NSStringFromClass([vcStr class]) forKey:@"foregroundVC"];
+};
+
++ (UIViewController *)foregroundVC {
+    return [[NSClassFromString([self objectForKey:@"foregroundVC"]) alloc] init];
+};
+
++ (void)saveEnterBackgroundTime {
+    [self setObject:@([[NSDate date] timeIntervalSince1970]) forKey:@"enterBackgroundTime"];
+};
+
++ (BOOL)isEnterBackgroundTime {
+    NSInteger lastTime = [self integerForKey:@"enterBackgroundTime"];
+    if (lastTime > 0) {
+        return ([[NSDate date] timeIntervalSince1970] - lastTime) > 0;
+    }else {
+        return NO;
+    }
+};
 
 
 @end

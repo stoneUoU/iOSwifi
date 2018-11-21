@@ -10,4 +10,9 @@
 
 @implementation RandomTools
 
++ (NSInteger)getRandomNumber:(NSInteger)from to:(NSInteger)to
+{
+    return (NSInteger)(from + (arc4random() % (to - from + 1)));
+}
+
 @end

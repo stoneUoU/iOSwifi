@@ -8,6 +8,7 @@
 
 #import "TabBarViewController.h"
 #import "HomeViewController.h"
+#import "ShopCartViewController.h"
 
 @implementation TabBarViewController
 //定义一个静态变量，实现登录后的跳转界面
@@ -66,8 +67,8 @@ static TabBarViewController *tabVC = nil;
     HomeViewController *homeView1 = [[HomeViewController alloc] init];
     [self setUpOneChildVcWithVc:homeView1 Image:@"mine_icon_store_onclick" selectedImage:@"mine_icon_store_click" title:@"商城"];
     
-    HomeViewController *homeView2 = [[HomeViewController alloc] init];
-    [self setUpOneChildVcWithVc:homeView2 Image:@"icon_shoppingcar_onclick" selectedImage:@"icon_shoppingcar_click" title:@"购物车"];
+    ShopCartViewController *shopCartView = [[ShopCartViewController alloc] init];
+    [self setUpOneChildVcWithVc:shopCartView Image:@"icon_shoppingcar_onclick" selectedImage:@"icon_shoppingcar_click" title:@"购物车"];
     
     HomeViewController *homeView3 = [[HomeViewController alloc] init];
     [self setUpOneChildVcWithVc:homeView3  Image:@"mine_icon_mine_onclick" selectedImage:@"mine_icon_mine_click" title:@"我的"];

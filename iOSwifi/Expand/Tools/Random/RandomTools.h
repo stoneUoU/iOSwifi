@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RandomTools : NSObject
 
++ (NSInteger)getRandomNumber:(NSInteger)from to:(NSInteger)to;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E017F5C219E631300D76E1C /* EnviSwitchPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E017F5B219E631300D76E1C /* EnviSwitchPlugin.m */; };
 		8E017F5F219E647B00D76E1C /* TextContactPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E017F5E219E647B00D76E1C /* TextContactPlugin.m */; };
+		8E017F63219EC38200D76E1C /* ShopCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E017F62219EC38200D76E1C /* ShopCartViewController.m */; };
 		8E02A3BB2197057C00A263B8 /* QuickLookStorageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3BA2197057C00A263B8 /* QuickLookStorageModel.m */; };
 		8E02A3BE21970C4A00A263B8 /* LocalData+Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3BD21970C4A00A263B8 /* LocalData+Store.m */; };
 		8E02A3C121970D4000A263B8 /* AppDelegate+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3C021970D4000A263B8 /* AppDelegate+Notification.m */; };
@@ -21,6 +22,9 @@
 		8E02A3D921970FD200A263B8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3D821970FD200A263B8 /* TabBarViewController.m */; };
 		8E02A3DC2197112700A263B8 /* UIImage+intoColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3DB2197112700A263B8 /* UIImage+intoColor.m */; };
 		8E02A3DF2197122D00A263B8 /* UITabBar+dotSmall.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A3DE2197122D00A263B8 /* UITabBar+dotSmall.m */; };
+		8E1F1C80219FA74E00E83C0D /* FindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F1C7F219FA74E00E83C0D /* FindView.m */; };
+		8E1F1C88219FF4E400E83C0D /* RandomTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F1C87219FF4E400E83C0D /* RandomTools.m */; };
+		8E1F1C8B219FFC7C00E83C0D /* UIImage+GIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F1C8A219FFC7C00E83C0D /* UIImage+GIFImage.m */; };
 		8E240F3A219D01F5009BAE4F /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F39219D01F5009BAE4F /* NSDate+Extension.m */; };
 		8E240F3E219D0360009BAE4F /* DeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F3D219D0360009BAE4F /* DeviceTool.m */; };
 		8E240F41219D05F7009BAE4F /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E240F40219D05F7009BAE4F /* OpenUDID.m */; };
@@ -105,6 +109,8 @@
 		8E017F5B219E631300D76E1C /* EnviSwitchPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnviSwitchPlugin.m; sourceTree = "<group>"; };
 		8E017F5D219E647B00D76E1C /* TextContactPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextContactPlugin.h; sourceTree = "<group>"; };
 		8E017F5E219E647B00D76E1C /* TextContactPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextContactPlugin.m; sourceTree = "<group>"; };
+		8E017F61219EC38200D76E1C /* ShopCartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopCartViewController.h; sourceTree = "<group>"; };
+		8E017F62219EC38200D76E1C /* ShopCartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopCartViewController.m; sourceTree = "<group>"; };
 		8E02A3B92197057C00A263B8 /* QuickLookStorageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickLookStorageModel.h; sourceTree = "<group>"; };
 		8E02A3BA2197057C00A263B8 /* QuickLookStorageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickLookStorageModel.m; sourceTree = "<group>"; };
 		8E02A3BC21970C4A00A263B8 /* LocalData+Store.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalData+Store.h"; sourceTree = "<group>"; };
@@ -130,6 +136,12 @@
 		8E02A3DB2197112700A263B8 /* UIImage+intoColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+intoColor.m"; sourceTree = "<group>"; };
 		8E02A3DD2197122D00A263B8 /* UITabBar+dotSmall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+dotSmall.h"; sourceTree = "<group>"; };
 		8E02A3DE2197122D00A263B8 /* UITabBar+dotSmall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+dotSmall.m"; sourceTree = "<group>"; };
+		8E1F1C7E219FA74E00E83C0D /* FindView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindView.h; sourceTree = "<group>"; };
+		8E1F1C7F219FA74E00E83C0D /* FindView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindView.m; sourceTree = "<group>"; };
+		8E1F1C86219FF4E400E83C0D /* RandomTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomTools.h; sourceTree = "<group>"; };
+		8E1F1C87219FF4E400E83C0D /* RandomTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomTools.m; sourceTree = "<group>"; };
+		8E1F1C89219FFC7C00E83C0D /* UIImage+GIFImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIFImage.h"; sourceTree = "<group>"; };
+		8E1F1C8A219FFC7C00E83C0D /* UIImage+GIFImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIFImage.m"; sourceTree = "<group>"; };
 		8E240F38219D01F5009BAE4F /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		8E240F39219D01F5009BAE4F /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		8E240F3C219D0360009BAE4F /* DeviceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceTool.h; sourceTree = "<group>"; };
@@ -321,6 +333,15 @@
 			path = DoraemonKit;
 			sourceTree = "<group>";
 		};
+		8E017F60219EC35500D76E1C /* ShopCart(购物车) */ = {
+			isa = PBXGroup;
+			children = (
+				8E017F61219EC38200D76E1C /* ShopCartViewController.h */,
+				8E017F62219EC38200D76E1C /* ShopCartViewController.m */,
+			);
+			path = "ShopCart(购物车)";
+			sourceTree = "<group>";
+		};
 		8E02A3B82197053400A263B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +378,24 @@
 				8E02A3D821970FD200A263B8 /* TabBarViewController.m */,
 			);
 			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		8E1F1C81219FA75300E83C0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E1F1C7E219FA74E00E83C0D /* FindView.h */,
+				8E1F1C7F219FA74E00E83C0D /* FindView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E1F1C85219FF4CA00E83C0D /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				8E1F1C86219FF4E400E83C0D /* RandomTools.h */,
+				8E1F1C87219FF4E400E83C0D /* RandomTools.m */,
+			);
+			path = Random;
 			sourceTree = "<group>";
 		};
 		8E240F3B219D0340009BAE4F /* DeviceTool */ = {
@@ -478,6 +517,7 @@
 		8E531AC921967D8700EA1CF3 /* Module(主要模块) */ = {
 			isa = PBXGroup;
 			children = (
+				8E017F60219EC35500D76E1C /* ShopCart(购物车) */,
 				8E531AEE2196861000EA1CF3 /* Base(基类) */,
 				8E531ACA21967DC600EA1CF3 /* Home(主页) */,
 				8EEA3C4D21985526002729F6 /* Find(发现) */,
@@ -511,6 +551,7 @@
 		8E531AD32196833E00EA1CF3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8E1F1C85219FF4CA00E83C0D /* Random */,
 				8E017F59219E62FF00D76E1C /* DoraemonKit */,
 				8E240F42219D1758009BAE4F /* CacheClean */,
 				8E240F3B219D0340009BAE4F /* DeviceTool */,
@@ -810,6 +851,8 @@
 				8E02A3DA2197112700A263B8 /* UIImage+intoColor.h */,
 				8EA476E3219AA47A002F504D /* UIImageView+CornerRadius.h */,
 				8EA476E4219AA47A002F504D /* UIImageView+CornerRadius.m */,
+				8E1F1C89219FFC7C00E83C0D /* UIImage+GIFImage.h */,
+				8E1F1C8A219FFC7C00E83C0D /* UIImage+GIFImage.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -1000,6 +1043,7 @@
 		8EEA3C4D21985526002729F6 /* Find(发现) */ = {
 			isa = PBXGroup;
 			children = (
+				8E1F1C81219FA75300E83C0D /* View */,
 				8EEA3C4E21985550002729F6 /* FindViewController.h */,
 				8EEA3C4F21985550002729F6 /* FindViewController.m */,
 			);
@@ -1205,6 +1249,7 @@
 				8E02A3D921970FD200A263B8 /* TabBarViewController.m in Sources */,
 				8E240F45219D1778009BAE4F /* CacheCleanTool.m in Sources */,
 				8E531AF82196873700EA1CF3 /* NetCheckTools.m in Sources */,
+				8E017F63219EC38200D76E1C /* ShopCartViewController.m in Sources */,
 				8EEA3C4321985444002729F6 /* CTMediator.m in Sources */,
 				8E240F62219D32DD009BAE4F /* UIImage+XYGif.m in Sources */,
 				8E6BC0F32199953F00C18613 /* Person+AttrAdd.m in Sources */,
@@ -1229,8 +1274,10 @@
 				8E531AF5219686D700EA1CF3 /* STPlaceholderView.m in Sources */,
 				8E6BC0F7219995AC00C18613 /* Person+MethodAdd.m in Sources */,
 				8E531AB42196748D00EA1CF3 /* HomeViewController.m in Sources */,
+				8E1F1C80219FA74E00E83C0D /* FindView.m in Sources */,
 				8EA476F4219AA65C002F504D /* BaseModel.m in Sources */,
 				8EEA3C4C219854D8002729F6 /* Target_Freshs.m in Sources */,
+				8E1F1C88219FF4E400E83C0D /* RandomTools.m in Sources */,
 				8E02A3BE21970C4A00A263B8 /* LocalData+Store.m in Sources */,
 				8E531AE52196857B00EA1CF3 /* HudTips.m in Sources */,
 				8E6BC10021999EE100C18613 /* SecondClass.m in Sources */,
@@ -1271,6 +1318,7 @@
 				8E531AED219685EE00EA1CF3 /* UIColor+Hex.m in Sources */,
 				8E531AEA219685AD00EA1CF3 /* UIView+Toast.m in Sources */,
 				8E531AB12196748D00EA1CF3 /* AppDelegate.m in Sources */,
+				8E1F1C8B219FFC7C00E83C0D /* UIImage+GIFImage.m in Sources */,
 				8E6BC0EF219994CA00C18613 /* Person.m in Sources */,
 				8E6BC0D62199680700C18613 /* STLogService.m in Sources */,
 				8E017F5F219E647B00D76E1C /* TextContactPlugin.m in Sources */,

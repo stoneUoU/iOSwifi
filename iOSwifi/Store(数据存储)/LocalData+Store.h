@@ -32,6 +32,18 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)saveDebugModeStatus:(BOOL)isOpen;
 + (BOOL)isOpenDebugMode;
 
+/**
+ *  保存进入后台的控制器
+ */
++ (void)saveEnterForegroundVC:(UIViewController *)vc;
++ (UIViewController *)foregroundVC;
+
+/**
+ *  保存进入后台的时间
+ */
++ (void)saveEnterBackgroundTime;
++ (BOOL)isEnterBackgroundTime;
+
 @end
 
 NS_ASSUME_NONNULL_END

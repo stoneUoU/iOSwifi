@@ -58,11 +58,11 @@
     if (remoteUserInfo) {//远程通知启动App
         //[self dealPushM:remoteUserInfo];
     }else{
-        if ([[NSString stringWithFormat:@"%@",[UICKeyChainStore keyChainStore][@"firstInA"]]  isEqual: @"true"]){
+        if (![[NSString stringWithFormat:@"%@",[UICKeyChainStore keyChainStore][@"firstInA"]]  isEqual: @"true"]){
             [self pageGo];
         }else{
             //[self setFollow];
-            [self xyLoadIntroductionPageWithExampleType:LoadIntroductionPageWithExampleType2];
+            [self xyLoadIntroductionPageWithExampleType:LoadIntroductionPageWithExampleType2 isAsRootVC:YES];
         }
         
     }
@@ -78,7 +78,7 @@
     #if defined(DEBUG) || defined(ADHOC)
         if (![LocalData isOpenDebugMode]) {
             [[DoraemonManager shareInstance] addPluginWithTitle:@"环境切换" icon:@"apollo" desc:@"环境切换" pluginName:@"EnviSwitchPlugin" atModule:@"业务专区"];
-            [[DoraemonManager shareInstance] addPluginWithTitle:@"文本检测" icon:@"apollo" desc:@"文本检测" pluginName:@"TextContactPlugin" atModule:@"业务专区"];
+            [[DoraemonManager shareInstance] addPluginWithTitle:@"文本检测" icon:@"maximize" desc:@"文本检测" pluginName:@"TextContactPlugin" atModule:@"业务专区"];
             [[DoraemonManager shareInstance] addStartPlugin:@"EnviSwitchPlugin"];
             [[DoraemonManager shareInstance] addStartPlugin:@"TextContactPlugin"];
             [[DoraemonManager shareInstance] addH5DoorBlock:^(NSString *h5Url) {
@@ -186,12 +186,17 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [LocalData saveEnterBackgroundTime];
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-//    [self xyLoadIntroductionPageWithExampleType:LoadIntroductionPageWithExampleType2];
+    [LocalData saveEnterForegroundVC:[VCTools getCurrVC]];
+    
+    if ([LocalData isEnterBackgroundTime] && [[NSString stringWithFormat:@"%@",self.window.rootViewController] containsString:@"TabBarViewController"]) {
+        [self xyLoadIntroductionPageWithExampleType:LoadIntroductionPageWithExampleType2 isAsRootVC:NO];
+    }
 }
 
 

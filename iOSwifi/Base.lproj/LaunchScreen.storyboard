@@ -19,32 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUZ-sg-LzI">
-                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_splash_start_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vco-5i-4eg">
-                                        <rect key="frame" x="117.5" y="40" width="140" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="77c-TY-jhb"/>
-                                            <constraint firstAttribute="height" constant="40" id="Yp9-le-unE"/>
-                                        </constraints>
+                                        <rect key="frame" x="117.5" y="30" width="140" height="40"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Vco-5i-4eg" firstAttribute="centerX" secondItem="PUZ-sg-LzI" secondAttribute="centerX" id="RLU-Wa-wpR"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="a3N-Vl-oWC"/>
-                                    <constraint firstAttribute="height" constant="120" id="az7-Uu-ui6"/>
-                                    <constraint firstAttribute="bottom" secondItem="Vco-5i-4eg" secondAttribute="bottom" constant="40" id="eoN-fV-k39"/>
+                                    <constraint firstItem="Vco-5i-4eg" firstAttribute="top" secondItem="PUZ-sg-LzI" secondAttribute="top" constant="30" id="Efy-2u-K4H"/>
+                                    <constraint firstItem="Vco-5i-4eg" firstAttribute="centerX" secondItem="PUZ-sg-LzI" secondAttribute="centerX" id="Rew-bb-lys"/>
+                                    <constraint firstAttribute="height" constant="100" id="vo1-kg-hbT"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PUZ-sg-LzI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NuO-qL-X15"/>
-                            <constraint firstItem="PUZ-sg-LzI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WeR-yX-CQw"/>
-                            <constraint firstItem="PUZ-sg-LzI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bfQ-vb-IYr"/>
-                            <constraint firstAttribute="trailing" secondItem="PUZ-sg-LzI" secondAttribute="trailing" id="gM9-Io-PhF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PUZ-sg-LzI" secondAttribute="bottom" id="vOo-lq-7e3"/>
+                            <constraint firstItem="PUZ-sg-LzI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6oE-sc-nwA"/>
+                            <constraint firstItem="PUZ-sg-LzI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bhf-LD-0y0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PUZ-sg-LzI" secondAttribute="bottom" id="DnX-tG-pkd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

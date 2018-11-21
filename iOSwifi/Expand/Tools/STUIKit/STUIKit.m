@@ -21,9 +21,37 @@
     return [UIColor color_HexStr:@"#000000"];
 }
 
-+(UIFont *)fontF00
++ (UIColor *)colorC15
+{
+    return [UIColor color_HexStr:@"#555555"];
+}
+
++ (UIColor *)colorC16
+{
+    return [UIColor color_HexStr:@"#007aff"];
+}
+
++ (UIColor *)colorC17
+{
+    return [UIColor color_HexStr:@"#1e96ff"];
+}
+
+
++ (UIFont *)fontF00
 {
     return [UIFont systemFontOfSize:18];
 }
+
++ (UIFont *)fontF017
+{
+    return [UIFont systemFontOfSize:17];
+}
+
++ (UIFont *)fontF02
+{
+    return [UIFont systemFontOfSize:16];
+}
+
+
 
 @end

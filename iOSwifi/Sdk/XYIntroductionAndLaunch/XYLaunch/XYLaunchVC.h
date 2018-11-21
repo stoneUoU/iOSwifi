@@ -54,6 +54,7 @@ typedef enum : NSUInteger {
 @property (nonatomic,assign)BOOL      xyIsCloseTimer;//是否关不启动定时器
 @property (nonatomic,strong)UIImageView * xyAdImgView;//广告图
 @property (nonatomic,strong)UITapGestureRecognizer * xySkipLabelTap;//跳过手势
+@property (nonatomic,strong)UITapGestureRecognizer * xySkipBtnTap;//跳过按钮
 @property (nonatomic,strong)NSString * xyAdImgUrl;//广告网络图片
 @property (nonatomic,strong)NSString * xyAdLocalImgName;//广告本地图片
 @property (nonatomic,strong)NSString * xyAdPlaceholderImgName;//默认图
@@ -83,7 +84,7 @@ typedef enum : NSUInteger {
 @property (nonatomic,strong)NSTimer  * xyRollTimer;//定时
 
 //init
-- (instancetype)initWithRootVC:(UIViewController *)rootVC withLaunchType:(XYLaunchType)launchType;
+- (instancetype)initWithRootVC:(UIViewController *)rootVC withLaunchType:(XYLaunchType)launchType isAsRootVC:(BOOL )asRootVC;
 
 //重置开启定时器
 - (void)xy_startFire;

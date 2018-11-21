@@ -21,17 +21,23 @@
 #import "XYLaunchVC.h"
 #import "UIImageView+WebCache.h"
 #import "UIImage+XYGif.h"
+#import "UIImage+GIFImage.h"
 #define XYScreenBounds [UIScreen mainScreen].bounds
 @interface XYLaunchVC ()<UIScrollViewDelegate>
 {
     int _xyRollX;
     bool _xyIsReverse;
 }
+
+@property (nonatomic,assign) BOOL asRootVC;
+
+@property (nonatomic,strong) YYImageCache *picCache;
+
 @end
 
 @implementation XYLaunchVC
 
-- (instancetype)initWithRootVC:(UIViewController *)rootVC withLaunchType:(XYLaunchType)launchType{
+- (instancetype)initWithRootVC:(UIViewController *)rootVC withLaunchType:(XYLaunchType)launchType isAsRootVC:(BOOL )asRootVC{
     self = [super init];
     if(self){
         self.xyRootVC = rootVC;
@@ -40,10 +46,12 @@
         self.xyIsSkip = YES;
         self.xyGifFrontView  = [[UIView alloc]initWithFrame:XYScreenBounds];
         self.xyRollFrontView = [[UIView alloc]initWithFrame:XYScreenBounds];
+        self.asRootVC = asRootVC;
+        self.picCache = [YYWebImageManager sharedManager].cache;
         if(_xyLaunchType == XYLaunchAD){
-            self.xyAdImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, XYScreenBounds.size.width, XYScreenBounds.size.height - 120)];
-            self.logoView = [[UIView alloc]initWithFrame:CGRectMake(0, XYScreenBounds.size.height - 120, XYScreenBounds.size.width, 120)];
-            self.logoImgView = [[UIImageView alloc]initWithFrame:CGRectMake((XYScreenBounds.size.width - 140)/2, 40, 140, 40)];
+            self.xyAdImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, XYScreenBounds.size.width, XYScreenBounds.size.height - 100)];
+            self.logoView = [[UIView alloc]initWithFrame:CGRectMake(0, XYScreenBounds.size.height - 100, XYScreenBounds.size.width, 100)];
+            self.logoImgView = [[UIImageView alloc]initWithFrame:CGRectMake((XYScreenBounds.size.width - 140)/2, 30, 140, 40)];
             self.logoImgView.image = [UIImage imageNamed:@"icon_splash_start_logo"];
             [self.logoView addSubview:self.logoImgView];
             [self.view addSubview:self.logoView];
@@ -98,10 +106,11 @@
 - (void)xyLayoutEnterBtn{
     self.xyEnterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.xyEnterBtn.frame = CGRectMake(XYScreenBounds.size.width/2 - 60, XYScreenBounds.size.height - 120, 120, 40);
+    self.xyEnterBtn.tag = 1;
     self.xyEnterBtn.tintColor = [UIColor lightGrayColor];
     [self.xyEnterBtn setImage:[UIImage imageNamed:@"XYEnter"] forState:UIControlStateNormal];
-    [self.xyEnterBtn addTarget:self action:@selector(xySkipTap) forControlEvents:UIControlEventTouchUpInside];
-
+    self.xySkipBtnTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(xySkipTap:)];
+    [self.xyEnterBtn addGestureRecognizer:self.xySkipBtnTap];
 }
 
 - (void)xyLayoutNormalLaunch{
@@ -165,7 +174,8 @@
     [self.view addSubview:self.xyTimerLabel];
     
     if(self.xyIsSkip){
-        self.xySkipLabelTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(xySkipTap)];
+        self.xySkipLabelTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(xySkipTap:)];
+        self.xyTimerLabel.tag = 1;
         [self.xyTimerLabel addGestureRecognizer:self.xySkipLabelTap];
     }
     if(self.xyIsCloseTimer == YES){
@@ -180,12 +190,26 @@
 - (void)setXyAdImgUrl:(NSString *)xyAdImgUrl{
     _xyAdImgUrl = xyAdImgUrl;
     __weak typeof (self)selfWeak = self;
-    [self.xyAdImgView sd_setImageWithURL:[NSURL URLWithString:xyAdImgUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    
+    if ([self.picCache getImageDataForKey:xyAdImgUrl]) {
+        self.xyAdImgView.image = [UIImage imageWithGIFData:[self.picCache getImageDataForKey:xyAdImgUrl] scaledToSize:CGSizeMake(ScreenW, ScreenH - 100)];
         if(selfWeak.xyAdTimer){
             [selfWeak.xyAdTimer fire];
         }
-
-    }];
+    } else {
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:xyAdImgUrl] options:SDWebImageDownloaderUseNSURLCache progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            if (!error) {
+                [self.picCache setImage:nil imageData:data forKey:xyAdImgUrl withType:YYImageCacheTypeDisk];
+                self.xyAdImgView.image = [UIImage imageWithGIFData:[self.picCache getImageDataForKey:xyAdImgUrl] scaledToSize:CGSizeMake(ScreenW, ScreenH - 100)];
+                if(selfWeak.xyAdTimer){
+                    [selfWeak.xyAdTimer fire];
+                }
+            } else {
+                STLog(@"错误信息:%@",error);
+            }
+        }];
+    }
 }
 
 - (void)setXyAdLocalImgName:(NSString *)xyAdLocalImgName{
@@ -337,10 +361,11 @@
     self.xyAdDuration --;
     if(self.xyAdDuration <0){
         [self.xyAdTimer invalidate];
-        
-        
-        STLog(@"%@",self.view.window.rootViewController);
-        self.view.window.rootViewController = self.xyRootVC;
+        if (self.asRootVC) {
+            self.view.window.rootViewController = self.xyRootVC;
+        } else {
+            [self.view removeFromSuperview];
+        }
     }
     if(self.xyIsSkip){
         self.xyTimerLabel.text = [NSString stringWithFormat:@"跳过 %ld",self.xyAdDuration];
@@ -350,12 +375,13 @@
     }
 }
 
-- (void)xySkipTap{
-    [self xyReleaseAll];
+- (void)xySkipTap:(UITapGestureRecognizer *)sender {
     
+    UIView *respondV = (UIView *)sender.view;
+    [self xyReleaseAll:respondV.tag];
 }
 
-- (void)xyReleaseAll{
+- (void)xyReleaseAll:(BOOL )isClickSkip{
     if(self.xyAdTimer !=nil){
         [self.xyAdTimer invalidate];
         self.xyAdTimer = nil;
@@ -366,12 +392,30 @@
         self.xyRollTimer = nil;
     }
     
-    [self xyBackMainVC];
+    [self xyBackMainVC:isClickSkip];
 }
 
-- (void)xyBackMainVC{
-    STLog(@"%@",self.view.window.rootViewController);
-    self.view.window.rootViewController = self.xyRootVC;
+- (void)xyBackMainVC:(BOOL )isClickSkip{
+
+    if (self.asRootVC) {
+        if (isClickSkip) {
+            self.view.window.rootViewController = self.xyRootVC;
+        } else {
+            self.view.window.rootViewController = self.xyRootVC;
+            UIViewController *vc = [[CTMediator sharedInstance] st_mediator_toVCWithParams:@{@"林磊":@"林磊"}];
+            [VCTools pushToNextVC:[VCTools getCurrVC] destVC:vc];
+        }
+    } else {
+        [self.view removeFromSuperview];
+        //在这里判断:当前控制器有没有导航栏控制器
+        if (self.navigationController.topViewController == [VCTools getCurrVC]) {
+            UIViewController *vc = [[CTMediator sharedInstance] st_mediator_toVCWithParams:@{@"林磊":@"林磊"}];
+            [VCTools presentToNaviVC:[VCTools getCurrVC] destVC:vc animate:YES];
+        } else {
+            UIViewController *vc = [[CTMediator sharedInstance] st_mediator_toVCWithParams:@{@"林磊":@"林磊"}];
+            [VCTools pushToNextVC:[VCTools getCurrVC] destVC:vc];
+        }
+    }
 
 }
 

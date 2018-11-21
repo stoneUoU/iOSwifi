@@ -8,10 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@protocol FindViewDelegate
+@optional
 
-@interface FindView : UIView
+//声明代理方法
+- (void)toOperate;
 
 @end
 
-NS_ASSUME_NONNULL_END
+@interface FindView : UIView{
+}
+
+@property (nonatomic ,weak)id<FindViewDelegate> delegate;
+
+@property (nonatomic ,strong)UIView *uiView;
+
+@end
+

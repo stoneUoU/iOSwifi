@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FindView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FindViewController : BaseViewController
 
-@property(nonatomic,copy)NSDictionary *pass_vals;
+/*****上个界面传过来的值*****/
+@property(nonatomic,copy)NSDictionary *staticVals;
+
+@property(nonatomic,strong)FindView *findView;
+
+@property (nonatomic, strong) NSMutableArray *findMs;
 
 @end
 
